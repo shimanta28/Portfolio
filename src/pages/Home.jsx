@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import DownloadCVButton from "../component/DownloadCvButton";
+import DownloadCVButton from "../component/DownloadCvButton.jsx";
 
 const Home = () => {
   return (
