@@ -18,12 +18,15 @@ const Form = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const res = await fetch("", {
+      const res = await fetch("http://localhost:8000/api/responses", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      if (res.ok) {
         alert("Form submitted successfully!");
         setFormData({
           name: "",
