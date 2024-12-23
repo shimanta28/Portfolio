@@ -18,13 +18,16 @@ const Form = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const res = await fetch("http://localhost:8000/api/responses", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://portfolio-backend-my98.onrender.com/api/responses",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (res.ok) {
         alert("Form submitted successfully!");
